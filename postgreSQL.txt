@@ -1,0 +1,25 @@
+install postgresql first
+npm init -y
+npm i --save express
+npm i esm
+npm i nodemon -D // d fro dev dependencies
+npm i pg
+"dev" : "nodemon -r esm server.js"
+
+//postgresql commands
+-connection check: \conninfo
+-list of db: \l
+-creation of DB: CREATE DATABASE <db name>;
+-connect to selected DB: \c <db name>
+-creation of table: CREATE TABLE <table name>;
+example: CREATE TABLE users (
+    ID SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    address VARCHAR(255),
+    email VARCHAR(255),
+    phone BIGINT //big-int support 10 digit numbers system
+);  press ENTER
+
+-see created table: \dt
+-putting value in table: INSERT INTO <table name> (col1, col2, col3, col3) ENTER
+                         VALUES ("value1", integer, "value3"); ENTER
